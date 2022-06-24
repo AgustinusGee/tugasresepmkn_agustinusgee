@@ -1,3 +1,4 @@
+// ignore: unnecessary_import
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -27,6 +28,7 @@ class _DetailResepScreenState extends State<DetailResepScreen> {
 
   @override
   void dispose() {
+    // ignore: todo
     // TODO: implement dispose
     // _provider.dispose();
     super.dispose();
@@ -60,6 +62,7 @@ class _DetailResepScreenState extends State<DetailResepScreen> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
+                    // ignore: prefer_const_constructors
                     SizedBox(height: 10.0),
                     Text(
                       "Porsi : ${resepProvider.detailResepModel.results!.servings}",
@@ -69,23 +72,23 @@ class _DetailResepScreenState extends State<DetailResepScreen> {
                     ),
                     // ),
                     // ),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
                     Text(
                         "Lama Pengerjaan : ${resepProvider.detailResepModel.results!.times}"),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
                     Text(
                         "Level Pengerjaan : ${resepProvider.detailResepModel.results!.dificulty}"),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
                     Text(
                         "Penulis : ${resepProvider.detailResepModel.results!.author!.user}"),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
                     Text(
                         "Penulis : ${resepProvider.detailResepModel.results!.author!.datePublished}"),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
 
                     Text(
                         "Deskripsi : ${resepProvider.detailResepModel.results!.desc}"),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
                     ListView.builder(
                       shrinkWrap: true,
                       itemCount: resepProvider
@@ -94,19 +97,21 @@ class _DetailResepScreenState extends State<DetailResepScreen> {
                         return Column(
                           children: [
                             Text(
+                                // ignore: unnecessary_string_interpolations
                                 "${resepProvider.detailResepModel.results!.needItem![index].itemName!}"),
                             Image.network(
+                                // ignore: unnecessary_string_interpolations
                                 "${resepProvider.detailResepModel.results!.needItem![index].thumbItem!}"),
                           ],
                         );
                       },
                     ),
-                    SizedBox(height: 10.0),
+                    const SizedBox(height: 10.0),
                     Text(
                         "Bahan-Bahan : ${resepProvider.detailResepModel.results!.ingredient}"),
 
-                    SizedBox(height: 10.0),
-                    Text("STEP : "),
+                    const SizedBox(height: 10.0),
+                    const Text("STEP : "),
                     Text("${resepProvider.detailResepModel.results!.step}"),
                   ],
                 ),

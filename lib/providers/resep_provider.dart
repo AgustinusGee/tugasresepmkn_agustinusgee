@@ -42,6 +42,7 @@ class ResepDetailProvider with ChangeNotifier {
 
   showDetailResep(String? id) async {
     // detailResepModel = await resepservice.getDetailResep(key: id);
+    // ignore: avoid_print
     print('id $id');
     notifyListeners();
   }

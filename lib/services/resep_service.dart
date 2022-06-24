@@ -8,6 +8,7 @@ class ResepService {
   Future<ResepModel> getResep() async {
     var response = await Dio()
         .get('https://masak-apa-tomorisakura.vercel.app/api/recipes/1');
+    // ignore: avoid_print
     print(response);
     return ResepModel.fromJson(response.data);
   }
@@ -16,7 +17,9 @@ class ResepService {
   Future<DetailResepModel> getDetailResep({String? key}) async {
     var response = await Dio()
         .get('https://masak-apa-tomorisakura.vercel.app/api/recipe/$key');
+    // ignore: avoid_print
     print(key);
+    // ignore: avoid_print
     print("response : $response");
     return DetailResepModel.fromJson(response.data);
   }
